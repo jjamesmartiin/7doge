@@ -1,4 +1,3 @@
-# test text
 import tweepy as tp  # pip install tweepy
 
 auth = tp.OAuthHandler("petU9I2MLe9koGOcikP8DN2WS", "cBVqJTcDTpk0F6OCqL7G8px2dgniYVPbEuvVXDMQVK8LWk6BlJ")
@@ -9,5 +8,10 @@ api = tp.API(auth)
 user = api.get_user('@elonmusk')
 timeline = api.user_timeline('@elonmusk', trim_user=True, exclude_replies=True)
 
-for i in timeline:
-    print(i.text)
+for tweet in timeline:
+    text = tweet.text.lower()
+    if 'snl' not in text:
+        print('buy dogecoin $50')
+    elif 'dogecoin' in text:
+        print('buy dogecoin $100')
+    print('test')
