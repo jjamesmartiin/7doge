@@ -16,14 +16,20 @@ def get_latest_tweet(twitter_handle):
     get_latest_tweet.timeline = authorize.api.user_timeline(twitter_handle, count=1, trim_user=False, exclude_replies=True)
     # tweet will fail if the user does not exist, implement try block soon
 
-while True:
-    authorize()
-    get_latest_tweet('elonmusk')
-    for tweet in get_latest_tweet.timeline:
-        text = tweet.text.lower()
-        print(text)
-        if re.search(dogecoin, text):
-            print('buy dogecoin $100')
-        elif re.search(doge, text):
-            print(' buy dogecoin $50')
-    time.sleep(1)
+# while True:
+authorize()
+get_latest_tweet('elonmusk')
+for tweet in get_latest_tweet.timeline:
+    text = tweet.text.lower()
+    print(text)
+    if re.search(dogecoin, text):
+        print('buy dogecoin $100')
+    elif re.search(doge, text):
+        print(' buy dogecoin $50')
+# time.sleep(1)
+
+# webull section
+wb = paper_webull()
+wb.login('jjamesmartiin@gmail.com', '9hyur^8Q3tZp')
+
+wb.
