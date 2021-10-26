@@ -30,7 +30,7 @@ for tweet in get_latest_tweet.timeline:
 
 # webull section
 wb = paper_webull()
-wb.login('jjamesmartiin@gmail.com', '9hyur^8Q3tZp')
+wb.login('jjamesmartiin@gmail.com', '9hyur^8Q3tZp') # password changed lol :)
 
 wb.get_trade_token('719656')
 wb.place_order(stock='DOGEUSD', price=)
